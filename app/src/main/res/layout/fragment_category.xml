@@ -1,12 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ini Katalog"/>
+        android:layout_height="match_parent">
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="8dp">
+
+            <include
+                android:id="@+id/agama"
+                layout="@layout/m_buku_agama_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+
+            <include
+                android:id="@+id/bisnis"
+                layout="@layout/m_buku_bisnis_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" />
+
+            <include
+                android:id="@+id/akuntansi"
+                layout="@layout/m_buku_akutansi_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/agama" />
+
+            <include
+                android:id="@+id/hukum"
+                layout="@layout/m_buku_hukum_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/bisnis" />
+
+            <include
+                android:id="@+id/komputer"
+                layout="@layout/m_buku_komputer_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/akuntansi" />
+
+            <include
+                android:id="@+id/mul"
+                layout="@layout/m_buku_multimedia_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/hukum" />
+
+            <include
+                android:id="@+id/pendidikan"
+                layout="@layout/m_buku_pendidikan_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/komputer" />
+
+            <include
+                android:id="@+id/pertanian"
+                layout="@layout/m_buku_pertanian_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/mul" />
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
